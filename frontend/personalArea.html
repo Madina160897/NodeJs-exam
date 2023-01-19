@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://localhost:8080/static/style.css">
+    <title>Personal Area</title>
+</head>
+
+<body>
+
+    <div class="fon-user">
+        <header>
+            <div class="head">
+                <div class="icon-line"> <img class="acc" src="./img/free-icon-news-feed-4520862.png">
+                    <a class="header-text ml-5" href="./newsline.html"> Лента новостей</a>
+                </div>
+                <div class="icon-line"> <img class="acc" src="./img/free-icon-users-5013404.png"> <a
+                        class="header-text ml-5" href="./users.html">Список пользователей</a> </div>
+                <div class=" str icon-line"> <img class="acc"
+                        src="./img/png-transparent-computer-icons-user-user-icon.png">
+                    <span class="ml-5">Личный кабинет</span>
+                </div>
+                <div class="more_div"></div>
+                <button class="exit">Выйти</button>
+            </div>
+        </header>
+
+        <main>
+
+            <div class="pors_block">
+
+            </div>
+
+            <div class="news-post-info">
+                <div class="new-post">
+                    <p>Заголовок</p>
+                    <input type="text" name="" id="post-title">
+                    <p>Пост</p>
+                    <textarea name="" class="post-text" cols="20" rows="5"></textarea>
+                    <p>Картинка</p>
+                    <textarea class="post-img-new" type="text" placeholder="URL-ссылка"></textarea>
+                    <div class="mt-10">
+                        <button class="btn-red" onclick="addPost()">Сохранить</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="posts_block">
+
+            </div>
+
+            <div class="back-block2">
+                <div class="edit-data2">
+                    <p>Заголовок</p>
+                    <input id="edTitle" type="text">
+                    <p>Пост</p>
+                    <textarea name="" id="edPost" cols="20" rows="5"></textarea>
+                    <p>Картинка</p>
+                    <textarea id="edImg" type="text" placeholder="URL-ссылка"></textarea>
+                    <button onclick="saveNewPost()" class="btn mt-20">Сохранить</button>
+                    <button onclick="cancelBtn()" class="btn mt-20">Отмена</button>
+                </div>
+
+
+        </main>
+    </div>
+
+</body>
+<script src="./personalArea.js"></script>
+
+</html>
