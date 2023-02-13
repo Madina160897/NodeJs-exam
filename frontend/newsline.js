@@ -16,10 +16,11 @@ const loadData = async () => {
                         <div>
                             <img class="img-user" src="./img/png-transparent-computer-icons-user-user-icon.png">
                         </div>
-
+                        <div class="name-post">
                         <div class="name-sn">
-                           <p> <b class="surname-user ml-5"> ${post.surname || ""} </b> <b class="name-user ml-5"> ${post.name || ""}
+                           <p class="df"> <b class="surname-user ml-5"> ${post.email || ""} 
                             </b> </p>
+                            </div>
                             <p class="text_date"><i>${post.date}</i></p>
                         </div>
                     </div>
