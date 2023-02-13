@@ -76,4 +76,28 @@ router.put("/:id", (req, res) => {
     });
 })
 
+router.post("/follow", async (req, res) => {
+    const { userId, followedUserId } = req.body;
+    const user = await EmailModel.findById(userId);
+
+    user.follows.push(followedUserId)
+    user.save((err) => {
+        if (err) {
+            res.status(500).send(err);
+        } else {
+            res.status(201).send("User followed");
+        }
+    });
+});
+
+
+router.post("/unfollow", async (req, res) => {
+    const { userId, followedUserId } = req.body;
+    const user = await EmailModel.findById(userId);
+
+    await EmailModel.findByIdAndUpdate(userId,{follows: user.follows.filter((user) => user != followedUserId)})
+    res.status(201).send("User unfollowed");
+
+});
+
 module.exports = router;

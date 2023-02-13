@@ -6,6 +6,7 @@ const EmailSchema = new Schema({
     name: String,
     surname: String,
     age: Number,
+    follows: [],
 });
 
 const NewPostShema = new Schema({
@@ -20,13 +21,8 @@ const NewPostShema = new Schema({
     },
 })
 
-const FollowShema = new Schema({
-   follow: [EmailSchema]
-});
-
 
 module.exports = {
     EmailSchema,
     NewPostShema,
-    FollowShema,
 };

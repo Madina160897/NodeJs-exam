@@ -354,3 +354,12 @@ a {
     margin-top: 10px;
 
 }
+
+.name-post{
+    display: flex;
+    flex-direction: column;
+}
+
+.df{
+    display: flex;
+}

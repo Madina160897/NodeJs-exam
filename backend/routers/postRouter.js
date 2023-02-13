@@ -1,5 +1,5 @@
 const express = require("express");
-const { NewPostModel, EmailModel } = require("../Models");
+const { NewPostModel } = require("../Models");
 const router = express.Router();
 
 router.get("/", (req, res) => {
